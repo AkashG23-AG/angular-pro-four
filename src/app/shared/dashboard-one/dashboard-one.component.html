@@ -1,0 +1,130 @@
+<div class="">
+    <div class="grid grid-cols-3 p- gap-4">
+        <div class="cards">
+            <div>
+                <table #tableDiv border="1" class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Country</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>28</td>
+                            <td>USA</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>32</td>
+                            <td>UK</td>
+                        </tr>
+                        <tr>
+                            <td>Michael Lee</td>
+                            <td>25</td>
+                            <td>Canada</td>
+                        </tr>
+                        <tr>
+                            <td>Chris Evans</td>
+                            <td>35</td>
+                            <td>Germany</td>
+                        </tr>
+                        <tr>
+                            <td>Emma Watson</td>
+                            <td>30</td>
+                            <td>France</td>
+                        </tr>
+                        <tr>
+                            <td>Robert Brown</td>
+                            <td>27</td>
+                            <td>Italy</td>
+                        </tr>
+                        <tr>
+                            <td>Lisa White</td>
+                            <td>29</td>
+                            <td>Spain</td>
+                        </tr>
+                        <tr>
+                            <td>David Black</td>
+                            <td>40</td>
+                            <td>Netherlands</td>
+                        </tr>
+                        <tr>
+                            <td>Oliver Green</td>
+                            <td>33</td>
+                            <td>Sweden</td>
+                        </tr>
+                        <tr>
+                            <td>Sophia Blue</td>
+                            <td>36</td>
+                            <td>Norway</td>
+                        </tr>
+                        <tr>
+                            <td>William Red</td>
+                            <td>31</td>
+                            <td>Denmark</td>
+                        </tr>
+                        <tr>
+                            <td>Ava Yellow</td>
+                            <td>26</td>
+                            <td>Finland</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button (click)="exportToPPT()">Export Table to PPT</button>
+
+
+
+        </div>
+        <div class="cards h-[100px]" [class.fullscreen]="expandStatus['window1']">
+            <div class="card_header">
+                <h5>Minimize and Maximize</h5>
+                <div>
+                    <button *ngIf="!expandStatus['window1']" title="Maximize View" class="primary"
+                        (click)="windows('window1')">
+                        <i class='fas fa-expand' style='font-size:18px'></i>
+                    </button>
+                    <button *ngIf="expandStatus['window1']" title="Maximize View" class="error"
+                        (click)="windows('window1')">
+                        <i class='fas fa-compress' style='font-size:18px'></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards h-[100px]">
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Scroll Buttons -->
+<div class="fixed top-4 right-4 z-50 flex flex-col space-y-2">
+  <button (click)="scrollTo('prev')" class="bg-blue-500 text-white px-4 py-2 rounded">↑ Prev</button>
+  <button (click)="scrollTo('next')" class="bg-green-500 text-white px-4 py-2 rounded">↓ Next</button>
+</div>
+
+<!-- Section 1 -->
+<div id="section0" class="h-screen flex items-center justify-center bg-red-500 text-white text-4xl">
+  Section 1
+</div>
+
+<!-- Section 2 -->
+<div id="section1" class="h-screen flex items-center justify-center bg-blue-500 text-white text-4xl">
+  Section 2
+</div>
+
+<!-- Section 3 -->
+<div id="section2" class="h-screen flex items-center justify-center bg-green-500 text-white text-4xl">
+  Section 3
+</div>
+
+<!-- Section 4 -->
+<div id="section3" class="h-screen flex items-center justify-center bg-purple-500 text-white text-4xl">
+  Section 4
+</div>

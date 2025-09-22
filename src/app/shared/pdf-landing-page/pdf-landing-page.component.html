@@ -1,0 +1,86 @@
+<!-- 
+<div class="fixed bottom-0 right-4 z-50 flex flex-col space-y-2 mb-7">
+  <button (click)="scrollTo('prev')" class="bg-blue-500 text-white px-4 py-2 rounded">↑ Top</button>
+  <button (click)="scrollTo('next')" class="bg-green-500 text-white px-4 py-2 rounded">↓ Bootom</button>
+</div>
+
+
+<div>
+  <div id="section0" class="h-screen flex items-center justify-center bg-neutral-800  border border-neutral-500 text-white text-4xl">
+    Section 1
+  </div>
+  
+ 
+  <div id="section1" class="h-screen flex items-center justify-center bg-neutral-800 border border-neutral-500 text-white text-4xl">
+    Section 2
+  </div>
+  
+  
+  <div id="section2" class="h-screen flex items-center justify-center bg-neutral-800 border border-neutral-500 text-white text-4xl">
+    Section 3
+  </div>
+  
+
+  <div id="section3" class="h-screen flex items-center justify-center bg-neutral-800 border border-neutral-500 text-white text-4xl">
+    Section 4
+  </div>
+</div> -->
+
+<!-- Checkbox Controls -->
+<!-- Prev/Next Buttons -->
+<div class="relative p-6 bg-white rounded-md shadow-md overflow-hidden">
+  <!-- Top gradient border -->
+  <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-yellow-500 to-pink-500"></div>
+
+  <!-- Left gradient border -->
+  <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-red-500 via-yellow-500 to-pink-500"></div>
+
+  <!-- Content inside the box -->
+  <h2 class="text-lg font-bold mb-2">Top & Left Gradient Border</h2>
+  <p>This box has gradient borders on the top and left.</p>
+</div>
+
+
+<!-- Sections (IDs must be consistent with TypeScript array) -->
+<div>
+  <div class="fixed top-4 right-4 z-50 flex flex-col space-y-2">
+    <button class="bg-blue-500 text-white px-3 py-2 rounded"  (click)="scrollTo('prev')">
+      <span><i class="fa-solid fa-arrow-up"></i></span>Prev</button>
+    <button class="bg-green-500 text-white px-3 py-2 rounded" (click)="scrollTo('next')">
+      <span><i class="fa-solid fa-arrow-down"></i></span>Next</button>
+  </div>
+  <section *ngIf="isOverallScore" id="section0"
+    class="h-screen bg-red-500 flex items-center justify-center text-4xl text-white">
+    Overall Score
+  </section>
+
+  <section *ngIf="isProcessScore" id="section1"
+    class="h-screen bg-blue-500 flex items-center justify-center text-4xl text-white">
+    Process Score
+  </section>
+
+  <section *ngIf="isSubProcessScore" id="section2"
+    class="h-screen bg-green-500 flex items-center justify-center text-4xl text-white">
+    Sub Process Score
+  </section>
+
+  <section *ngIf="isBenchmarking" id="section3"
+    class="h-screen bg-purple-500 flex items-center justify-center text-4xl text-white">
+    Benchmarking
+  </section>
+
+  <section *ngIf="isCategory" id="section4"
+    class="h-screen bg-yellow-500 flex items-center justify-center text-4xl text-white">
+    Category
+  </section>
+
+  <section *ngIf="isSurvey" id="section5"
+    class="h-screen bg-pink-500 flex items-center justify-center text-4xl text-white">
+    Survey
+  </section>
+</div>
+
+<section *ngIf="isQuestionDetails" id="section6"
+  class="h-screen bg-gray-800 flex items-center justify-center text-4xl text-white">
+  Question Details
+</section>

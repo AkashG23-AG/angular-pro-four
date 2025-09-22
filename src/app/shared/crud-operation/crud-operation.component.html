@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>User Form</h2>
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Name:</label>
+      <input type="text" formControlName="name" />
+    </div>
+    <div>
+      <label>Email:</label>
+      <input type="email" formControlName="email" />
+    </div>
+    <button type="submit" [disabled]="userForm.invalid">Add User</button>
+  </form>
+
+  <h3>User List</h3>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

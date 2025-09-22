@@ -1,0 +1,32 @@
+/* styles.css or inside Angular component */
+#data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+@page {
+  size: A3 portrait;
+  margin: 2mm;
+}
+@media print {
+  table, th, td {
+    page-break-inside: avoid;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tfoot {
+    display: table-footer-group;
+  }
+
+  @page {
+  size: A3 portrait;
+  margin: 2mm;
+}
+}

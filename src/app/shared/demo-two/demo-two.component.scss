@@ -1,0 +1,9 @@
+/* Optional: small visual polish */
+:host {
+  display: block;
+}
+
+/* enable smooth hover enlarge */
+.rounded-full {
+  will-change: width, height;
+}

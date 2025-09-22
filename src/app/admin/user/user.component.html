@@ -1,0 +1,262 @@
+<!-- 
+<div class="containers">
+  <div class="container">
+    <div class="box">Box 1</div>
+    <ul class="dropdown">
+        <li>List 1</li>
+        <li>List 2</li>
+    </ul>
+</div>
+</div> -->
+<!-- (mouseenter)="onHover(true)" (mouseleave)="onHover(false)" -->
+<div class="main">
+  <div class="box" >
+    <span (click)="toggleActive(1)">Hover Me</span>
+    <ul class="active" [ngClass]="isHovered === 1 ? 'h-[192px]' :'h-[0px]'">
+      
+      <li class="py-1">
+        <h5>Box1</h5>
+      </li>
+      <li class="py-1">
+        <h5>Box2</h5>
+      </li>
+      <li class="py-1">
+        <h5>Box2</h5>
+      </li>
+    </ul>
+  </div>
+  <div class="box">
+    <span (click)="toggleActive(2)">Hover Me</span>
+    <ul class="active" [ngClass]="isHovered === 2 ? 'h-[192px]' :'h-[0px]'">
+      
+      <li class="py-1">
+        <h5>Box1</h5>
+      </li>
+      <li class="py-1">
+        <h5>Box2</h5>
+      </li>
+      <li class="py-1">
+        <h5>Box2</h5>
+      </li>
+    </ul>
+  </div>
+  <div class="box">
+    <span (click)="toggleActive(3)">Hover Me</span>
+    <ul class="active" [ngClass]="isHovered === 3 ? 'h-[192px]' :'h-[0px]'">
+      
+      <li class="py-1">
+        <h5>Box1</h5>
+      </li>
+      <li class="py-1">
+        <h5>Box2</h5>
+      </li>
+      <li class="py-1">
+        <h5>Box2</h5>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<ul class="box_2">
+  <li><a href="#" (click)="onToggel(1)">Dropdown</a>
+    <ul [ngClass]="isOpened ? 'h-0' : 'h-14' ">
+      <li *ngIf="isOpened === 1">
+        <h5>Box1</h5>
+        <h5>Box2</h5>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#" (click)="onToggel(2)">Dropdown</a>
+    <ul [ngClass]="isOpened ? 'h-0' : 'h-14' ">
+      <li *ngIf="isOpened === 2">
+        <h5>Box1</h5>
+        <h5>Box2</h5>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let item of menuItems; let i = index">
+    <button (click)="toggleDropdown(i)">
+      {{ item.name }} {{ item.open ? '▲' : '▼' }}
+    </button>
+
+    <ul *ngIf="item.open" class="nested-menu">
+      <li *ngFor="let subItem of item.children; let j = index">
+        <button (click)="toggleSubDropdown(i, j)">
+          {{ subItem.name }} {{ subItem.open ? '▲' : '▼' }}
+        </button>
+
+        <ul *ngIf="subItem.open" class="nested-sub-menu">
+          <li *ngFor="let subSubItem of subItem.children">
+            {{ subSubItem }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="newDrop">
+  <ul>
+    <!-- Dropdown 1 -->
+    <li>
+      <button (click)="toggleDropdown(1)">
+        Dropdown 1 {{ activeDropdown === 1 ? '▲' : '▼' }}
+      </button>
+      <ul *ngIf="activeDropdown === 1" class="dropdown-menu">
+        <li>Option 1</li>
+        <li>Option 2</li>
+      </ul>
+    </li>
+
+    <!-- Dropdown 2 -->
+    <li>
+      <button (click)="toggleDropdown(2)">
+        Dropdown 2 {{ activeDropdown === 2 ? '▲' : '▼' }}
+      </button>
+      <ul *ngIf="activeDropdown === 2" class="dropdown-menu">
+        <li>Option A</li>
+        <li>Option B</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+<!-- <div class="hovers">
+  <ul class="box">
+    <a>Hover Me1</a>
+    <li>
+      <h5>Box1</h5>
+      <h5>Box2</h5>
+    </li>
+  </ul>
+  <ul class="box">
+    <span>Hover Me2</span>
+    <li>
+      <h5>Box3</h5>
+      <h5>Box4</h5>
+    </li>
+  </ul>
+</div> -->
+
+<!-- 
+<div class="dropdowns">
+  <ul class="dropdown">
+    <li class="menu" id="dropdown1">Dropdown1
+      <ul class="dropdown-content" id="list1">
+        <li>List 1</li>
+        <li>List 2</li>
+      </ul>
+    </li>
+    <li class="menu" id="dropdown2">Dropdown2
+      <ul class="dropdown-content" id="list2">
+          <li>List 3</li>
+          <li>List 4</li>
+      </ul>
+  </li>
+  </ul>
+</div> -->
+
+<!-- <div class="form-container">
+  <h2>Enter Text and Display</h2>
+  <input type="text" [(ngModel)]="userInput" placeholder="Enter text here">
+  <input type="text" [(ngModel)]="userName" placeholder="Enter text here">
+  <button (click)="displayText()">Submit</button>
+
+  <h3 *ngIf="displayedText">You Entered: {{ displayedText }}</h3>
+  <h3 *ngIf="userText">You Entered: {{ userText }}</h3>
+</div> -->
+
+<!-- <div class="main_accordian">
+  <div *ngFor="let accordion of accordions, let i = index">
+    <div class="accordion" [ngClass]="{'is-active' : activeIndex === i}">
+      <div class="accordion__container">
+        <div class="accordion__header" (click)="toggleClass($event, i)">
+          <h2 class="accordion__heading">{{ accordion.name }}</h2>
+        </div>
+        <div class="accordion__content">
+          <div class="accordion__text">{{ accordion.text }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" formControlName="firstName">
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" formControlName="lastName">
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" formControlName="email">
+
+  <button type="submit">Submit</button>
+</form> -->
+
+<!-- <p>user works!</p>
+
+<div class="userProgres">
+  <div class="grid_2">
+    <div class="flex">
+      <div>
+        <div class="light_blue">Utilization</div>
+        <div class="text"><span class="light_blue">{{ getActiveMaleCount() }}</span> / 10</div>
+      </div>
+    </div>
+    <div class="grid-20">
+      <div *ngFor="let male of males">
+        <div>
+          <i class="fa-solid fa-person font" [ngClass]="{'active': male.isActive, 'inactive': !male.isActive}"
+            [style.color]="male.color"></i>
+          {{ male.number }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid_2">
+    <div class="flex">
+      <div>
+        <div class="light_pink">Productivity</div>
+        <div class="text"><span class="light_pink">{{ getActiveFemaleCount() }}</span> / 10</div>
+      </div>
+    </div>
+    <div class="grid-20">
+      <div *ngFor="let female of females">
+        <div>
+          <i class="fa-solid fa-person-dress font" [ngClass]="{'active': female.isActive, 'inactive': !female.isActive}"
+            [style.color]="female.color"></i>
+          {{ female.number }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid_2">
+    <div class="flex">
+      <div>
+        <div class="light_pink">Yeiled</div>
+        <div class="text"><span class="light_pink">{{ getActiveYeiledCount() }}</span> / 10</div>
+      </div>
+    </div>
+    <div class="grid-20">
+      <div *ngFor="let Yeiled of Yeileds">
+        <div>
+          <i class="fa-solid fa-person-dress font" [ngClass]="{'active': Yeiled.isActive, 'inactive': !Yeiled.isActive}"
+            [style.color]="Yeiled.color"></i>
+          {{ Yeiled.number }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+ -->

@@ -1,0 +1,125 @@
+.active {
+  color: white;
+}
+
+.inactive {
+  color: black;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.grid-20 {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-column-gap: 5px;
+}
+
+.grid_2 {
+  display: grid;
+  grid-template-columns: 0.2fr auto;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+}
+
+.light_blue {
+  color: #247ba0;
+  font-size: 20px;
+}
+
+.light_pink {
+  color: #f25f5c;
+  font-size: 20px;
+}
+
+.font {
+  font-size: 30px;
+}
+
+.container {
+  display: flex;
+}
+
+.scheduler-container,
+.grid-container {
+  flex: 1;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+}
+
+.grid-container div {
+  margin: 5px;
+  padding: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.custom-drag-preview {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.scheduler-container,
+.grid-container {
+  flex: 1;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+}
+
+.custom-drag-preview {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background-color: rgba(0, 0, 255, 0.5);
+  /* Example background color (blue with 50% opacity) */
+  border: 2px dashed #000;
+  pointer-events: none;
+  /* Ensure the drag preview doesn't interfere with pointer events */
+  z-index: 100;
+  /* Ensure the drag preview is above other elements */
+  display: none;
+  /* Initially hide the drag preview */
+}
+
+
+.grid-container div {
+  margin: 5px;
+  padding: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: auto 0.2fr;
+  gap: 5px;
+}
+
+.w_200 {
+  width: 200px;
+}
+
+.w_0 {
+  width: 0px;
+}
+
+.transition {
+  transition: all .4s ease-in-out;
+  ;
+}

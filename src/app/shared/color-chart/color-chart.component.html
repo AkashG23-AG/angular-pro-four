@@ -1,0 +1,123 @@
+<div class="p-6 space-y-6">
+    <div class="grid grid-cols-4 gap-6 bg-[#202020] p-2">
+
+        <!-- First Div -->
+        <div class="flex flex-col items-center">
+            <input type="text" [(ngModel)]="colors.first" placeholder="#RRGGBB"
+                class="border rounded px-2 py-1 w-32 text-center" />
+            <div class="w-32 h-32 mt-3 rounded shadow border flex items-center justify-center text-sm font-medium"
+                [style.backgroundColor]="colors.first">
+                {{ colors.first || 'No Color' }}
+            </div>
+            <button (click)="resetColor('first')"
+                class="mt-3 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded">Reset</button>
+        </div>
+
+        <!-- Second Div -->
+        <div class="flex flex-col items-center">
+            <input type="text" [(ngModel)]="colors.second" placeholder="#RRGGBB"
+                class="border rounded px-2 py-1 w-32 text-center" />
+            <div class="w-32 h-32 mt-3 rounded shadow border flex items-center justify-center text-sm font-medium"
+                [style.backgroundColor]="colors.second">
+                {{ colors.second || 'No Color' }}
+            </div>
+            <button (click)="resetColor('second')"
+                class="mt-3 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded">Reset</button>
+        </div>
+
+        <!-- Third Div -->
+        <div class="flex flex-col items-center">
+            <input type="text" [(ngModel)]="colors.third" placeholder="#RRGGBB"
+                class="border rounded px-2 py-1 w-32 text-center" />
+            <div class="w-32 h-32 mt-3 rounded shadow border flex items-center justify-center text-sm font-medium"
+                [style.backgroundColor]="colors.third">
+                {{ colors.third || 'No Color' }}
+            </div>
+            <button (click)="resetColor('third')"
+                class="mt-3 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded">Reset</button>
+        </div>
+
+        <!-- Fourth Div -->
+        <div class="flex flex-col items-center">
+            <input type="text" [(ngModel)]="colors.fourth" placeholder="#RRGGBB"
+                class="border rounded px-2 py-1 w-32 text-center" />
+            <div class="w-32 h-32 mt-3 rounded shadow border flex items-center justify-center text-sm font-medium"
+                [style.backgroundColor]="colors.fourth">
+                {{ colors.fourth || 'No Color' }}
+            </div>
+            <button (click)="resetColor('fourth')"
+                class="mt-3 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded">Reset</button>
+        </div>
+    </div>
+
+    <!-- Reset All Button -->
+    <div class="text-center mt-6">
+        <button (click)="resetAll()" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded">
+            Reset All
+        </button>
+    </div>
+</div>
+
+<div>
+
+    <div class="">
+
+        <div class="grid grid-cols-5 gap-5">
+            <div class="grid grid-rows-3 col-span-2 gap-4 items-center pl-6">
+                <input type="color" [(ngModel)]="hexColors.first" placeholder="#RRGGBB"
+                    class=" w-28 h-10 border rounded cursor-pointer text-center" />
+                <input type="color" [(ngModel)]="hexColors.second" placeholder="#RRGGBB"
+                    class=" w-28 h-10 border rounded cursor-pointer text-center" />
+                <input type="color" [(ngModel)]="hexColors.third" placeholder="#RRGGBB"
+                    class=" w-28 h-10 border rounded cursor-pointer text-center" />
+            </div>
+
+            <div>
+                <div class="w-32 h-32  rounded shadow border flex items-center justify-center text-sm font-medium"
+                    [style.backgroundColor]="hexColors.first">
+                    {{ hexColors.first || 'No Color' }}
+                </div>
+                <div class="w-32 h-32  rounded shadow border flex items-center justify-center text-sm font-medium"
+                    [style.backgroundColor]="hexColors.second">
+                    {{ hexColors.second || 'No Color' }}
+                </div>
+                <div class="w-32 h-32  rounded shadow border flex items-center justify-center text-sm font-medium"
+                    [style.backgroundColor]="hexColors.third">
+                    {{ hexColors.third || 'No Color' }}
+                </div>
+            </div>
+
+            <div>
+                <div class="w-32 h-32  rounded shadow border flex items-center justify-center text-sm font-medium"
+                    [style.backgroundColor]="hexColors.first">
+                    {{ hexColors.first || 'No Color' }}
+                </div>
+                <div class="w-32 h-32  rounded shadow border flex items-center justify-center text-sm font-medium"
+                    [style.backgroundColor]="hexColors.second">
+                    {{ hexColors.second || 'No Color' }}
+                </div>
+                <div class="w-32 h-32  rounded shadow border flex items-center justify-center text-sm font-medium"
+                    [style.backgroundColor]="hexColors.third">
+                    {{ hexColors.third || 'No Color' }}
+                </div>
+            </div>
+
+            <div>
+                <div class="w-32 h-32  rounded shadow border flex items-center justify-center text-sm font-medium"
+                    [style.backgroundColor]="hexColors.first">
+                    {{ hexColors.first || 'No Color' }}
+                </div>
+                <div class="w-32 h-32  rounded shadow border flex items-center justify-center text-sm font-medium"
+                    [style.backgroundColor]="hexColors.second">
+                    {{ hexColors.second || 'No Color' }}
+                </div>
+                <div class="w-32 h-32  rounded shadow border flex items-center justify-center text-sm font-medium"
+                    [style.backgroundColor]="hexColors.third">
+                    {{ hexColors.third || 'No Color' }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

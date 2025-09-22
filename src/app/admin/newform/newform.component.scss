@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1a2025;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.input-container {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background: #1a2025;
+    border: 1px solid #80808059;
+}
+
+.select-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background: #1a2025;
+    border: 1px solid #80808059;
+}
+
+
+.input-field:focus {
+    border: 1px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+select {
+    width: 100%;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 10px;
+    font-size: 13px;
+    /* border-radius: 0.5rem; */
+    /* box-shadow: 0 1px 4px rgb(146 161 176 / 15%); */
+    cursor: pointer;
+    background: #1a2025;
+    color: #767676;
+    outline: none;
+
+}
+
+select:focus {
+    outline: none;
+    border: 1px solid #80808059;
+}
+
+.select-field:focus {
+    border: 1px solid dodgerblue;
+}

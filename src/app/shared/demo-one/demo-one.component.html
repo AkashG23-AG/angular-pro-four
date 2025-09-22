@@ -1,0 +1,103 @@
+<div class="grid grid-cols-3 gap-2" [class.fullscreen]="expandStatus['window1']">
+    <div class="cards p-2">
+        <div class="flex justify-between">
+            <h5>Minimize and Maximize</h5>
+            <div  *ngIf="expandStatus['window1']">
+              <button title="Maximize View" (click)="windows('window1')">
+                  <i class='fas fa-expand' style='font-size:18px'></i>
+              </button>
+            </div>
+            <div *ngIf="expandStatus['window1']">
+              <button title="Minimize View" (click)="windows('window1')" themeColor="error">
+                  <i class='fas fa-expand' style='font-size:18px'></i>
+              </button>
+            </div>
+          </div>
+
+        <div class="vardana_sans_serif">
+            <p><b class="text-red-500">Georgia, serif : </b>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+            
+            <p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+        </div>
+        
+    </div>
+    <div class="cards p-2">
+        <h1 class="Helvetica">Garamond, serif</h1>
+
+        <div class="Garamond_serif">
+            <p><b class="text-red-500">Helvetica, sans-serif : </b>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+            
+            <p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+        </div>
+    </div>
+    <div class="cards p-2">
+        <h1 class="Merriweather">'Merriweather', serif</h1>
+
+        <div class="Open_Sans">
+            <p><b class="text-red-500">"Open Sans", sans-serif : </b>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is borred-500 dered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+            
+            <p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+        </div>
+    </div>
+    <div class="cards p-2">
+        <h1 class="Abril_Fatface">'Abril Fatface', serif</h1>
+
+        <div class="Poppins">
+            <p><b class="text-red-500">Poppins', sans-serif : </b>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is borred-500 dered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+            
+            <p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+        </div>
+    </div>
+    <div class="cards p-2">
+        <h1 class="Cinzel">'Cinzel', serif</h1>
+
+        <div class="Fauna_One">
+            <p><b class="text-red-500">'Fauna One', serif : </b>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is borred-500 dered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+            
+            <p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container_grids flex flex-col grow">
+    <div class="cards_headers flex flex-col grow">
+      <div class="cards grow">1</div>
+      <div class="cards grow">2</div>
+      <div class="cards grow">3</div>
+      <div class="cards grow">4</div>
+      <div class="cards grow">5</div>
+      <div class="cards grow">6</div>
+      <div class="cards grow">7</div>
+      <div class="cards grow">8</div>
+      <div class="cards grow">9</div>
+      <div class="cards grow">10</div>
+      <div class="cards grow">11</div>
+    </div>
+  </div> -->
+  <!-- [style.max-height.px]="250" [style.min-height.px]="250" -->
+  <!-- <div class="grid-container flex flex-col grow ">
+    <div class="cards grow">
+        <div class="card_header">
+            <h5>Minimize and Maximize</h5>
+            <div>
+                <button *ngIf="!expandStatus['window1']" title="Maximize View" class="primary"
+                    (click)="windows('window1')">
+                    <i class='fas fa-expand' style='font-size:18px'></i>
+                </button>
+                <button *ngIf="expandStatus['window1']" title="Maximize View" class="error"
+                    (click)="windows('window1')">
+                    <i class='fas fa-compress' style='font-size:18px'></i>
+                </button>
+            </div>
+        </div>
+        <app-simple-column-chart [data]="simplecolumnChartData"
+            [chartPropertiesObject]="columnChartPropertiesObj"></app-simple-column-chart>
+    </div>
+    <div class="cards grow">2
+    </div>
+    <div class="cards grow">3
+    </div>
+    <div class="cards grow">4
+    </div>
+  </div> -->
+  

@@ -1,0 +1,227 @@
+.m_card {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    background-color: #23252c;
+    border: 1px solid #1e1b1b;
+    border-radius: 10px;
+}
+
+
+
+h1 {
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 2rem;
+    /* 32px */
+    font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.75rem;
+    /* 28px */
+    font-family: "Times New Roman", Times, serif;
+}
+
+h3 {
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.75rem;
+    /* 28px */
+    font-family: "Times New Roman", Times, serif;
+}
+
+h4 {
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.5rem;
+    /* 24px */
+    font-family: "Times New Roman", Times, serif;
+}
+
+h5 {
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.25rem;
+    /* 20px */
+    font-family: "Times New Roman", Times, serif;
+}
+
+h6 {
+    font-size: 0.75rem;
+    /* 12px */
+    line-height: 1rem;
+    /* 16px */
+    font-family: "Times New Roman", Times, serif;
+}
+
+.margin_auto {
+    margin: auto 10px auto 10px;
+}
+
+.input-container {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    width: 100%;
+    // margin-bottom: 30px;
+}
+
+.icon {
+    border-radius: 10px 0px 0px 10px;
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background: #1a2025;
+    border: 1px solid #80808059;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.select-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background: #1a2025;
+    border: 1px solid #80808059;
+}
+
+
+.input-field:focus {
+    border: 1px solid dodgerblue;
+}
+
+// /* Set a style for the submit button */
+// .btn {
+//   background-color: dodgerblue;
+//   color: white;
+//   padding: 15px 20px;
+//   border: none;
+//   cursor: pointer;
+//   width: 100%;
+//   opacity: 0.9;
+// }
+
+// .btn:hover {
+//   opacity: 1;
+// }
+
+// select{
+// width: 100%;
+//     outline: none;
+//     border: 1px solid #fff;
+//     padding: 10px;
+//     font-size: 13px;
+//     /* border-radius: 0.5rem; */
+//     /* box-shadow: 0 1px 4px rgb(146 161 176 / 15%); */
+//     cursor: pointer;
+//     background: #1a2025;
+//     color: #767676;
+//      outline: none;
+
+// }
+
+select:focus {
+    outline: none;
+    border: 1px solid #80808059;
+}
+
+.select-field:focus {
+    border: 1px solid dodgerblue;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+    width: 100%;
+    border: 1px solid #463f3f;
+    // margin: 0 0 5px;
+    padding: 8px 10px;
+    color: #9E9E9E;
+    background: #171717;
+}
+
+.btn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    z-index: 1001;
+  }
+  
+  .drawer.open {
+    right: 0;
+  }
+  
+  .drawer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+  }
+  
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .drawer-content {
+    padding: 1rem;
+  }
+
+  .box {
+    width: 300px;
+    height: 150px;
+    background-color: lightblue;
+    margin: 20px;
+    text-align: center;
+    line-height: 150px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  

@@ -1,0 +1,142 @@
+<div class="gc_auto_1fr">
+  <!-- 
+  <app-sidebar class="sidebar" [ngClass]="sidebarOpen ? 'w_0 transition' : 'w_200 transition'"></app-sidebar> -->
+  <app-sidebar class="sidebar transition" [class.w-0]="!sidebarOpen" [class.w-56]="sidebarOpen"></app-sidebar>
+  <div class="gc_auto_1fr_auto  h-screen border-l border-neutral-700">
+    <div class="border-b border-neutral-700 h-[38px] header flex justify-between px-2">
+      <div class="flex gap-2">
+        <!-- <button (click)="openLeftDrawer()" class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button> -->
+
+        <button (click)="toggleSidebar()" class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- <button (click)="openRightDrawer()" class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button> -->
+      </div>
+      <!-- <button (click)="toggleSidebar()" class="toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button> -->
+      <button (click)="toggleTheme()">
+        <!-- <i class="fa-solid fa-moon"></i> -->
+        <i class="fa-solid fa-sun"></i>
+      </button>
+    </div>
+    <div class="mainScroll p-1 grow flex flex-col">
+      <article class="mainScroll relative flex flex-col  h-screen grow bg-[#181a20]">
+        <router-outlet></router-outlet>
+      </article>
+    </div>
+    <div class="border-t border-neutral-700">
+      <h5>&nbsp;</h5>
+    </div>
+  </div>
+</div>
+
+
+<div class="top_drawer">
+  <div class="drawer" [class.open]="isOpenLeftDrawer">
+    <div class="drawer-header">
+      <h3>Left Drawer</h3>
+      <button (click)="closeLeftDrawer()">X</button>
+    </div>
+    <div class="drawer-content">
+      <p>This is the left drawer content.</p>
+    </div>
+  </div>
+</div>
+
+<div class="right_drawer">
+  <div class="drawer right" [class.open]="isOpenRightDrawer">
+    <div class="drawer-header">
+      <h3>Right Drawer</h3>
+      <button (click)="closerightDrawer()">X</button>
+    </div>
+    <div class="drawer-content">
+      <p>This is the right drawer content.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- <router-outlet></router-outlet>
+<app-user></app-user> -->
+
+<!-- <bryntum-scheduler
+    #scheduler
+    [resources] = "resources"
+    [events] = "events"
+    [height]="600"
+    [columns] = "schedulerConfig.columns!"
+    [startDate] = "schedulerConfig.startDate!"
+    [endDate] = "schedulerConfig.endDate!"
+    [stripeFeature]="false"
+      eventColor="indigo"
+  eventStyle="border"
+  tooltip = "My cool Bryntum Scheduler component"
+  
+></bryntum-scheduler> -->
+<!-- <div class="">
+  <bryntum-scheduler #scheduler [resources]="resources" [events]="events" [columns]="schedulerConfig.columns!"
+    [startDate]="schedulerConfig.startDate!" [endDate]="schedulerConfig.endDate!" [height]="600"></bryntum-scheduler>
+
+  <bryntum-grid [columns]="columns" [data]="data" ></bryntum-grid>
+</div>  -->
+<!-- 
+<bryntum-scheduler 
+[height]="600"
+ startDate="2023-04-16" 
+ endDate="2023-09-18" 
+ eventColor="indigo"
+ eventStyle="border"
+ [resources]="resources"
+ 
+  [crudManager]="crudManagerConfig" 
+  [columns]="columnsConfig">
+  
+</bryntum-scheduler>
+<bryntum-grid [columns]="columns" [data]="data" ></bryntum-grid>  -->
+
+<!-- <div id="scheduler-container" style="width: 100%; height: 600px;" cdkDropList (cdkDropListDropped)="dropSchedulerData($event)"></div>
+<div id="grid-container" cdkDropList (cdkDropListDropped)="dropSchedulerData($event)"></div>  -->
+
+<!-- <div id="grid-container" style="width: 100%; height: 600px;"></div> -->
+
+<!-- <div class="container">
+  <div class="scheduler-container" #schedulerContainer></div>
+  <div class="grid-container" #gridContainer></div>
+</div> -->
+<!-- <div class="container">
+  <div class="scheduler-container" #schedulerContainer></div>
+  <div class="grid-container" #gridContainer></div>
+  <div class="custom-drag-preview"></div>
+</div> -->
+<!-- 
+<div #schedulerContainer style="height: 600px;"></div>
+<div #gridContainer style="height: 200px;"></div> -->
+<!-- <div #scheduler style="height: 600px;"></div>
+<div #grid style="height: 200px;"></div> -->
+
+<!-- 
+<div class="grid-2">
+  <bryntum-scheduler #scheduler [resources]="resources" [events]="events" [columns]="schedulerConfig.columns!"
+    [startDate]="schedulerConfig.startDate!" [endDate]="schedulerConfig.endDate!" [height]="600"></bryntum-scheduler>
+  <bryntum-grid [columns]="columns" [data]="data" ></bryntum-grid>
+</div>  -->
+<!-- 
+<div class="scheduler-container">
+  <div #scheduler class="scheduler" style="height: 300px;"></div>
+</div>
+<div class="grid-container">
+  <div #grid class="grid" style="height: 300px;"></div>
+</div> -->
+
+<!-- <perfect-scrollbar [config]="config">
+  <div>Scrollable content</div>
+</perfect-scrollbar> -->

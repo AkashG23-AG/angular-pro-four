@@ -1,0 +1,103 @@
+.newSidebar {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+    }
+
+    ul:hover {
+        overflow: visible;
+    }
+
+    li {
+        position: relative;
+        /*   float: left; */
+        background-color: #17B0FF;
+        // width: 150px
+    }
+
+    li:hover {
+        background-color: #189BDF;
+    }
+
+    a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* second level */
+    ul ul {
+        max-height: 0;
+        transition: max-height 2s;
+    }
+
+    ul li:hover ul {
+        max-height: 999px;
+    }
+
+    ul ul li {
+        float: none;
+        background-color: #1a1b1b;
+    }
+
+    ul ul li:hover {
+        background-color: #1289C7;
+    }
+
+    /* third level */
+    ul ul ul {
+        position: absolute;
+        width: 0;
+        top: 0;
+        left: 100%;
+        transition: width 0.4s;
+    }
+
+    ul ul li:hover ul {
+        width: 100%;
+    }
+
+    ul ul ul li {
+        background-color: #DF7F18;
+    }
+
+    ul ul ul li:hover {
+        background-color: #C77115;
+    }
+}
+
+
+// .sidebar {
+//     width: 100%;
+//     background: #3498db;
+//     color: white;
+
+//     // transition: left 0.3sease-in-out;
+//     transition: height 0.3s ease-in-out;
+
+// }
+
+// .sidebar.open {
+//     left: 0;
+//     /* Show when open */
+// }
+
+// .sidebar ul {
+//     list-style: none;
+//     padding: 0;
+// }
+
+// .sidebar ul li {
+//     padding: 10px;
+//     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+//     cursor: pointer;
+// }
+
+// .sidebar ul li:hover {
+//     background: #2980b9;
+//     height: 50px;
+// }

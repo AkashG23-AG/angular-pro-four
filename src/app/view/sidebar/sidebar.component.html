@@ -1,0 +1,109 @@
+<div class="h-full  overflow-y-auto ">
+  <div class="h-[50px] p-2">
+    <h4>AG</h4>
+  </div>
+  <ul class="space-y-2 font-medium">
+    <li>
+      <a [routerLink]="['/demoOne']"
+        class="flex items-center p-2  rounded-lg  hover:bg-[#414142] hover:text-gray-100  dark:hover:bg-yellow-900 group">
+        <span><i class="fa-solid fa-address-card"></i></span>
+        <span class="ms-3">Dashboard-1</span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/DashboardOne']"
+        class="flex items-center p-2  rounded-lg  hover:bg-[#414142] hover:text-gray-100  dark:hover:bg-yellow-900 group">
+        <span><i class="fa-solid fa-address-card"></i></span>
+        <span class="ms-3">Dashboard-2</span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/CrudOperationComponent']"
+        class="flex items-center p-2 rounded-lg  hover:bg-[#414142] hover:text-gray-100  dark:hover:bg-yellow-900 group">
+        <span><i class="fa-solid fa-address-card"></i></span>
+        <span class="ms-3">Task Master-3</span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/amcharts5-demo']"
+        class="flex items-center p-2 rounded-lg  hover:bg-[#414142] hover:text-gray-100  dark:hover:bg-yellow-900 group">
+        <span><i class="fa-solid fa-address-card"></i></span>
+        <span class="ms-3">Amcharts-5</span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/mobileui']"
+        class="flex items-center p-2 rounded-lg  hover:bg-[#414142] hover:text-gray-100  dark:hover:bg-yellow-900 group">
+        <span><i class="fa-solid fa-address-card"></i></span>
+        <span class="ms-3">Mobile-Ui</span>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/pdflandingpage']"
+        class="flex items-center p-2 rounded-lg  hover:bg-[#414142] hover:text-gray-100  dark:hover:bg-yellow-900 group">
+        <span><i class="fa-solid fa-address-card"></i></span>
+        <span class="ms-3">PDF Landing Page</span>
+      </a>
+    </li>
+  </ul>
+  <div class="thinscroll grid gap-[7px]">
+    <div class="bg-neutral-800 border border-neutral-700">
+      <div class="flex justify-between items-center border-b border-neutral-700 p-2">
+        <h5>Ui Component</h5>
+        <h5 (click)="toggleAccordion(1)">
+          <i class="far fa-caret-square-down transition-transform duration-300 cursor-pointer"
+            [ngClass]="{ 'rotate-180': activeAccordion === 1 }"></i>
+        </h5>
+      </div>
+      <div class="overflow-hidden transition-all duration-500 thinscroll"
+        [ngClass]="activeAccordion === 1 ? 'h-[100px]' : 'h-0'">
+        <h6 class="p-2">Demo - 1</h6>
+        <h6 class="p-2">Demo - 2</h6>
+      </div>
+    </div>
+    <div class="bg-neutral-800 border border-neutral-700">
+      <div class="flex justify-between items-center border-b border-neutral-700 p-2">
+        <h5>Title-2</h5>
+        <h5 (click)="toggleAccordion(2)">
+          <i class="far fa-caret-square-down transition-transform duration-300 cursor-pointer"
+            [ngClass]="{ 'rotate-180': activeAccordion === 2 }"></i>
+        </h5>
+      </div>
+      <div class="overflow-hidden transition-all duration-500 thinscroll"
+        [ngClass]="activeAccordion === 2 ? 'h-[100px]' : 'h-0'">
+        <h6 class="p-2">Demo - 1</h6>
+        <h6 class="p-2">Demo - 2</h6>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- <div class="newSidebar" [ngClass]="{ 'open': isOpen }">
+   <div class="h-[50px]">
+    <h3 class="p-2">Sidebar Menu</h3>
+   </div>
+  <ul>
+    <li><a href="#">Dropdown</a>
+      <ul>
+        <li><a href="#">Secondary</a></li>
+        <li><a href="#">Secondary</a></li>
+        <li><a href="#">Slider</a>
+          <ul>
+            <li><a href="#">Tertiary</a></li>
+            <li><a href="#">Tertiary</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Secondary</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Primary</a>
+      <ul>
+        <li><a href="#">Tertiary</a></li>
+        <li><a href="#">Tertiary</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Primary</a></li>
+  </ul>
+</div> -->
